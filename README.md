@@ -7,5 +7,6 @@
 В этом репозитории вы можете найти некоторые из моих проектов.
 
 Навыки и технологии
+
 Jira, qase.io, SQL, Postman, Mockoon, Swagger, Trello, Confluence,
 SoapUI, Chrome DevTools, Sitechko, Checkvist, SQL, PostgreSQL, DBeaver.
