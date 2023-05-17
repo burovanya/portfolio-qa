@@ -28,4 +28,9 @@
 8. Выполнение приемочного тестирования <br>
 9. Тестирование API <br>
 
+<details><summary>**Документация к проекту**</summary>
+
+   1. ![Schedule 1!](/assets/images/Schedule 1.png "Schedule 1 ")
+   
+</details>
 
