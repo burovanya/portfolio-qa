@@ -30,4 +30,6 @@
 
 #### [Документация к проекту](https://docs.google.com/document/d/1KwkCh_gRAfiC7G064XySrrjeC8QjsXxQB1HDDupdY1Q/edit?usp=sharing)
 
+#### [Тестирование требований](https://docs.google.com/document/d/16epjLObPLmSWFnM1wbYbG_3lDmCdzyGLICrPEM8CyhQ/edit?usp=sharing)
+
 
