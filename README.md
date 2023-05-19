@@ -32,6 +32,7 @@
 
 #### Было проведено [тестирование требований](https://docs.google.com/document/d/16epjLObPLmSWFnM1wbYbG_3lDmCdzyGLICrPEM8CyhQ/edit?usp=sharing)
 
+![Декомпозиция](https://github.com/burovanya/portfolio-qa/blob/main/Miro.jpg)
 
 
 
