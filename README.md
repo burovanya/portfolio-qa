@@ -32,6 +32,6 @@
 
 #### Было проведено [тестирование требований](https://docs.google.com/document/d/16epjLObPLmSWFnM1wbYbG_3lDmCdzyGLICrPEM8CyhQ/edit?usp=sharing)
 
-![Декомпозиция](/Users/Desktop/Miro.jpg)
+
 
 
