@@ -1,0 +1,1063 @@
+{
+	"info": {
+		"_postman_id": "9fb831c9-9e12-40d7-9be1-2e9bc96c3d38",
+		"name": "Курсовая 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25778384"
+	},
+	"item": [
+		{
+			"name": "Отображение личных событий в расписании",
+			"item": [
+				{
+					"name": "Получение расписания",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"from\": \"2023-04-03T00:00:00+03:00\",\n    \"till\": \"2023-04-10T00:00:00+03:00\",\n    \"onlyTypes\": []\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}events",
+							"host": [
+								"{{baseURL}}events"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание события в будущем (valid)",
+			"item": [
+				{
+					"name": "in 3 days Кириллица 1 символ, пустое описание",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id2\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"startAt2\"",
+									"var value = pm.response.json().data.startAt",
+									"",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#EBFDF2\",\n    \"color\": \"#43B658\",\n    \"description\": \"\",\n    \"title\": \"Я\",\n    \"startAt\": \"{{startAt2}}\",\n    \"endAt\": \"{{endAt2}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "in 2 months Ссылка в названии и описании",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id7\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"startAt7\"",
+									"var value = pm.response.json().data.startAt",
+									"",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#EBFDF2\",\n    \"color\": \"#43B658\",\n    \"description\": \"https://sky.pro/\",\n    \"title\": \"https://sky.pro/\",\n    \"startAt\": \"{{startAt7}}\",\n    \"endAt\": \"{{endAt7}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание события на текущий день (valid)",
+			"item": [
+				{
+					"name": "Событие на текущий день",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id4\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"startAt4\"",
+									"var value = pm.response.json().data.startAt",
+									"",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#FFF7C7\",\n    \"color\": \"#FAC641\",\n    \"description\": \"https://sky.pro/courses/programming/qa-engineer\",\n    \"title\": \"МАРИЯ ЗАНЯТИЕ ENGLISH\",\n    \"startAt\": \"{{startAt4}}\",\n    \"endAt\": \"{{endAt4}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Создание события в прошлом (valid)",
+			"item": [
+				{
+					"name": "1 day ago Название на латинице с цифрами и описанием 1 символ",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id6\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"startAt6\"",
+									"var value = pm.response.json().data.startAt",
+									"",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#FFF7C7\",\n    \"color\": \"#FAC641\",\n    \"description\": \"Я\",\n    \"title\": \"English with Maria 4\",\n    \"startAt\": \"{{startAt6}}\",\n    \"endAt\": \"{{endAt6}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2 weeks ago Иероглифы в названии, описание 256 символов",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id3\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"startAt3\"",
+									"var value = pm.response.json().data.startAt",
+									"",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#F9EBFF\",\n    \"color\": \"#D478F1\",\n    \"description\": \"Вы научитесь работать в системах управления тестированием и узнаете, какие виды тестирования бывают. Проведите функциональное и регрессионное тестирование. Составлять и заводить отчеты в системах отслеживания ошибок. Научитесь писать отчеты о тестировании.\",\n    \"title\": \"マリアマリアマリアマリアマリアマリアマリアマリアマリアマリアマリアマリアマリアマ\",\n    \"startAt\": \"{{startAt3}}\",\n    \"endAt\": \"{{endAt3}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "1 month ago Спецсимволы в названии и описание из 500 символов",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id5\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"startAt5\"",
+									"var value = pm.response.json().data.startAt",
+									"",
+									"pm.collectionVariables.set(key, value)"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#F4F5F6\",\n    \"color\": \"#81888D\",\n    \"description\": \"Вы научитесь разбираться в основах тестирования и узнаете, как работает тестировщик. Работать в системах управления тестированием и узнаете, какие виды тестирования бывают. Проведите функциональное и регрессионное тестирование. Составлять и заводить отчеты в системах отслеживания ошибок. Научитесь писать отчеты о тестировании, а еще узнаете, какие метрики качества бывают и зачем их отслеживать. Писать тестовую документацию: тест-кейсы, тест. Создавать тесты на нагрузку с помощьюел Apache JMeter.\",\n    \"title\": \"%@#$%\",\n    \"startAt\": \"{{startAt5}}\",\n    \"endAt\": \"{{endAt5}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Редактирование в будущем (valid)",
+			"item": [
+				{
+					"name": "Edit название, день, время (valid)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id2\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"newStart\"",
+									"var value = pm.response.json().data.startAt"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#EBFDF2\",\n    \"color\": \"#43B658\",\n    \"description\": \"\",\n    \"title\": \"English\",\n    \"startAt\": \"{{newStart}}\",\n    \"endAt\": \"{{newEnd}}\",\n    \"id\": {{id2}},\n    \"oldStartAt\": \"{{startAt2}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}updatePersonal",
+							"host": [
+								"{{baseURL}}updatePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Редактирование в прошлом (valid)",
+			"item": [
+				{
+					"name": "Edit название, описание, день, время (valid)",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"var key = \"id6\"",
+									"var value = pm.response.json().data.payload.id",
+									"",
+									"pm.collectionVariables.set(key, value)",
+									"",
+									"var key = \"newStart6\"",
+									"var value = pm.response.json().data.startAt"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#EBFDF2\",\n    \"color\": \"#43B658\",\n    \"description\": \"\",\n    \"title\": \"อาเนีย\",\n    \"startAt\": \"{{newStart6}}\",\n    \"endAt\": \"{{newEnd6}}\",\n    \"id\": {{id6}},\n    \"oldStartAt\": \"{{startAt6}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}updatePersonal",
+							"host": [
+								"{{baseURL}}updatePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "(invalid) Редактирование без изменений",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#EBFDF2\",\n    \"color\": \"#43B658\",\n    \"description\": \"\",\n    \"title\": \"อาเนีย\",\n    \"startAt\": \"{{newStart6}}\",\n    \"endAt\": \"{{newEnd6}}\",\n    \"id\": {{id6}},\n    \"oldStartAt\": \"{{startAt6}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}updatePersonal",
+							"host": [
+								"{{baseURL}}updatePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Удаление события",
+			"item": [
+				{
+					"name": "Удалить отредактированное событие",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id6}},\n    \"startAt\": \"{{newStart6}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить событие в будущем",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id7}},\n    \"startAt\": \"{{startAt7}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить событие в будущем 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id2}},\n    \"startAt\": \"{{newStart}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить событие текущего дня",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id4}},\n    \"startAt\": \"{{startAt4}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить событие в прошлом",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id3}},\n    \"startAt\": \"{{startAt3}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удалить событие в прошлом 2",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id5}},\n    \"startAt\": \"{{startAt5}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Невалидные проверки",
+			"item": [
+				{
+					"name": "Пустые поля при создании",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"\",\n    \"color\": \"\",\n    \"description\": \"\",\n    \"title\": \"\",\n    \"startAt\": \"\",\n    \"endAt\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Название >40, описание >500 при создании",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#F4F5F6\",\n    \"color\": \"#81888D\",\n    \"description\": \"Вы научитесь разбираться в основах тестирования и узнаете, как работает тестировщик. Работать в системах управления тестированием и узнаете, какие виды тестирования бывают. Проведите функциональное и регрессионное тестирование. Составлять и заводить отчеты в системах отслеживания ошибок. Научитесь писать отчеты о тестировании, а ещееее узнаете, какие метрики качества бывают и зачем их отслеживать. Писать тестовую документацию: тест-кейсы, тест. Создавать тесты на нагрузку с помощью Apache JMeter.\",\n    \"title\": \"С Крисоом необходимо разобрать новую тему\",\n    \"startAt\": \"{{invalidStart}}\",\n    \"endAt\": \"{{invalidEnd}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Буквы в поле \"День\" и “Время”",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#F9EBFF\",\n    \"color\": \"#D478F1\",\n    \"description\": \"> [!NOTE] > Information the user should notice even if skimming. > [!TIP] > Optional information to help a user be more successful. > [!IMPORTANT] > Essential information required for user success. > [!CAUTION] > Negative potential consequences of an action. > [!WARNING] > Dangerous certain consequences of an action.\",\n    \"title\": \"МАРИЯ ЗАНЯТИЕ ENGLISH\",\n    \"startAt\": \"2023-АА-ЛТT1Р:00:00+03:00\",\n    \"endAt\": \"0000-АА-ЛТT0п:п0:00+03:00\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Пустое название при создании",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"#FFF7C7\",\n    \"color\": \"#FAC641\",\n    \"description\": \"Я\",\n    \"title\": \"\",\n    \"startAt\": \"{{invalidStart}}\",\n    \"endAt\": \"{{invalidEnd}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Ссылки во всех полях",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"backgroundColor\": \"https://sky.pro/\",\n    \"color\": \"https://sky.pro/\",\n    \"description\": \"https://sky.pro/\",\n    \"title\": \"https://sky.pro/\",\n    \"startAt\": \"https://sky.pro/\",\n    \"endAt\": \"https://sky.pro/\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}createPersonal",
+							"host": [
+								"{{baseURL}}createPersonal"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Удаление удаленного события",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Cookie",
+								"value": "session_global={{session_global}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": {{id6}},\n    \"startAt\": \"{{newStart6}}\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{baseURL}}removePersonal",
+							"host": [
+								"{{baseURL}}removePersonal"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "session_global",
+			"value": "",
+			"type": "string"
+		},
+		{
+			"key": "baseURL",
+			"value": "https://api-teachers.skyeng.ru/v2/schedule/",
+			"type": "string"
+		},
+		{
+			"key": "id2",
+			"value": "65968578",
+			"type": "string"
+		},
+		{
+			"key": "id3",
+			"value": "65968789",
+			"type": "string"
+		},
+		{
+			"key": "id4",
+			"value": "65965698",
+			"type": "string"
+		},
+		{
+			"key": "id5",
+			"value": "65966359"
+		},
+		{
+			"key": "id6",
+			"value": "65969051"
+		},
+		{
+			"key": "id7",
+			"value": "66467857",
+			"type": "string"
+		},
+		{
+			"key": "startAt2",
+			"value": "2023-04-10T05:30:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "newStart",
+			"value": "2023-05-09T21:15:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "newEnd",
+			"value": "2023-05-10T20:59:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "startAt3",
+			"value": "2023-03-24T08:45:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "startAt4",
+			"value": "2023-04-07T06:30:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "startAt5",
+			"value": "2023-03-08T07:30:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "startAt6",
+			"value": "2023-04-06T06:00:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "startAt7",
+			"value": "2023-06-07T05:30:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "newStart6",
+			"value": "2023-02-28T08:00:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "invalidStart",
+			"value": "2023-04-16T20:59:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "endAt2",
+			"value": "2023-04-10T06:30:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "endAt3",
+			"value": "2023-03-24T18:25:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "endAt4",
+			"value": "2023-04-07T07:05:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "endAt5",
+			"value": "2023-03-08T07:55:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "endAt6",
+			"value": "2023-04-06T10:00:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "endAt7",
+			"value": "2023-06-07T06:30:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "newEnd6",
+			"value": "2023-02-28T12:00:00+00:00",
+			"type": "string"
+		},
+		{
+			"key": "invalidEnd",
+			"value": "2023-04-15T21:59:00+00:00",
+			"type": "string"
+		}
+	]
+}

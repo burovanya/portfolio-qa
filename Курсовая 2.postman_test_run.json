@@ -1,0 +1,506 @@
+{
+	"id": "8f8c182e-317d-4376-b9d8-1d870a40b7f7",
+	"name": "Курсовая 2",
+	"timestamp": "2023-04-09T16:21:38.547Z",
+	"collection_id": "25778384-9fb831c9-9e12-40d7-9be1-2e9bc96c3d38",
+	"folder_id": 0,
+	"environment_id": "0",
+	"totalPass": 0,
+	"delay": 0,
+	"persist": true,
+	"status": "finished",
+	"startedAt": "2023-04-09T16:21:29.271Z",
+	"totalFail": 0,
+	"results": [
+		{
+			"id": "b9162bbb-a7a5-4003-a3ab-27e87f66d432",
+			"name": "Получение расписания",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/events",
+			"time": 3805,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				3805
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d1dd7889-8980-4933-bb4a-8042f849fb90",
+			"name": "in 3 days Кириллица 1 символ, пустое описание",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 156,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				156
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d677c9c4-d760-488a-b900-b7c028a4ca54",
+			"name": "in 2 months Ссылка в названии и описании",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 230,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				230
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "a35519d5-2591-4bf5-9342-c423ebffe7bd",
+			"name": "Событие на текущий день",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 147,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				147
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e294f393-14bd-49cd-a60c-c7a74ac8d91c",
+			"name": "1 day ago Название на латинице с цифрами и описанием 1 символ",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 175,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				175
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "0f703f42-5274-4f7e-821e-0b0a98dd41ba",
+			"name": "2 weeks ago Иероглифы в названии, описание 256 символов",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 183,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				183
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f0a6f7e8-4940-45f2-a128-63a7d110669f",
+			"name": "1 month ago Спецсимволы в названии и описание из 500 символов",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 167,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				167
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "f537d818-d385-43d5-bf47-c0fe8378f3a6",
+			"name": "Edit название, день, время (valid)",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/updatePersonal",
+			"time": 213,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				213
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "d7f7092a-2264-4617-ae0e-26cff462f841",
+			"name": "Edit название, описание, день, время (valid)",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/updatePersonal",
+			"time": 209,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				209
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "ccaea6ed-5d3f-4548-b768-06f965681f7d",
+			"name": "(invalid) Редактирование без изменений",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/updatePersonal",
+			"time": 104,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				104
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3d003a2a-6338-4617-b53b-0f611d436b7f",
+			"name": "Удалить отредактированное событие",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 141,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				141
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b97cafaf-b647-44e0-a161-d42290a7aa04",
+			"name": "Удалить событие в будущем",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 161,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				161
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "91c7dfdb-4cd4-40a2-80bc-0ea6c71334ae",
+			"name": "Удалить событие в будущем 2",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 144,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				144
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e4f52b3b-1e27-439c-937f-0f414d370dbc",
+			"name": "Удалить событие текущего дня",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 136,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				136
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "3b10955d-e7b0-4099-a10c-976004b91506",
+			"name": "Удалить событие в прошлом",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 148,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				148
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6bee8491-1af4-47bd-b416-9aec82eb337e",
+			"name": "Удалить событие в прошлом 2",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 143,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				143
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e9b758aa-06de-4856-a3dc-ccb0e1452fe5",
+			"name": "Пустые поля при создании",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 62,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				62
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "8d2b9e99-324a-4995-bd07-b7a768c89b66",
+			"name": "Название >40, описание >500 при создании",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 63,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				63
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "6ad6537c-de87-4bf5-be63-a30b61616ebe",
+			"name": "Буквы в поле \"День\" и “Время”",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 72,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				72
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "e8c38d2a-46bd-4364-95b2-744a3ff2087c",
+			"name": "Пустое название при создании",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 58,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				58
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "b2f6f491-7700-4579-a45f-ae852c85648b",
+			"name": "Ссылки во всех полях",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/createPersonal",
+			"time": 64,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				64
+			],
+			"allTests": [
+				{}
+			]
+		},
+		{
+			"id": "fec98a13-bd02-4f1b-99ef-4a6ad90d5934",
+			"name": "Удаление удаленного события",
+			"url": "https://api-teachers.skyeng.ru/v2/schedule/removePersonal",
+			"time": 115,
+			"responseCode": {
+				"code": 200,
+				"name": "OK"
+			},
+			"tests": {},
+			"testPassFailCounts": {},
+			"times": [
+				115
+			],
+			"allTests": [
+				{}
+			]
+		}
+	],
+	"count": 1,
+	"totalTime": 6696,
+	"collection": {
+		"requests": [
+			{
+				"id": "b9162bbb-a7a5-4003-a3ab-27e87f66d432",
+				"method": "POST"
+			},
+			{
+				"id": "d1dd7889-8980-4933-bb4a-8042f849fb90",
+				"method": "POST"
+			},
+			{
+				"id": "d677c9c4-d760-488a-b900-b7c028a4ca54",
+				"method": "POST"
+			},
+			{
+				"id": "a35519d5-2591-4bf5-9342-c423ebffe7bd",
+				"method": "POST"
+			},
+			{
+				"id": "e294f393-14bd-49cd-a60c-c7a74ac8d91c",
+				"method": "POST"
+			},
+			{
+				"id": "0f703f42-5274-4f7e-821e-0b0a98dd41ba",
+				"method": "POST"
+			},
+			{
+				"id": "f0a6f7e8-4940-45f2-a128-63a7d110669f",
+				"method": "POST"
+			},
+			{
+				"id": "f537d818-d385-43d5-bf47-c0fe8378f3a6",
+				"method": "POST"
+			},
+			{
+				"id": "d7f7092a-2264-4617-ae0e-26cff462f841",
+				"method": "POST"
+			},
+			{
+				"id": "ccaea6ed-5d3f-4548-b768-06f965681f7d",
+				"method": "POST"
+			},
+			{
+				"id": "3d003a2a-6338-4617-b53b-0f611d436b7f",
+				"method": "POST"
+			},
+			{
+				"id": "b97cafaf-b647-44e0-a161-d42290a7aa04",
+				"method": "POST"
+			},
+			{
+				"id": "91c7dfdb-4cd4-40a2-80bc-0ea6c71334ae",
+				"method": "POST"
+			},
+			{
+				"id": "e4f52b3b-1e27-439c-937f-0f414d370dbc",
+				"method": "POST"
+			},
+			{
+				"id": "3b10955d-e7b0-4099-a10c-976004b91506",
+				"method": "POST"
+			},
+			{
+				"id": "6bee8491-1af4-47bd-b416-9aec82eb337e",
+				"method": "POST"
+			},
+			{
+				"id": "e9b758aa-06de-4856-a3dc-ccb0e1452fe5",
+				"method": "POST"
+			},
+			{
+				"id": "8d2b9e99-324a-4995-bd07-b7a768c89b66",
+				"method": "POST"
+			},
+			{
+				"id": "6ad6537c-de87-4bf5-be63-a30b61616ebe",
+				"method": "POST"
+			},
+			{
+				"id": "e8c38d2a-46bd-4364-95b2-744a3ff2087c",
+				"method": "POST"
+			},
+			{
+				"id": "b2f6f491-7700-4579-a45f-ae852c85648b",
+				"method": "POST"
+			},
+			{
+				"id": "fec98a13-bd02-4f1b-99ef-4a6ad90d5934",
+				"method": "POST"
+			}
+		]
+	}
+}
