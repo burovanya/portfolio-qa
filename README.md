@@ -28,6 +28,6 @@
 8. Выполнение приемочного тестирования <br>
 9. Тестирование API <br>
 
-#### [Документация к проекту] (https://docs.google.com/document/d/1KwkCh_gRAfiC7G064XySrrjeC8QjsXxQB1HDDupdY1Q/edit?usp=sharing)
+#### [Документация к проекту](https://docs.google.com/document/d/1KwkCh_gRAfiC7G064XySrrjeC8QjsXxQB1HDDupdY1Q/edit?usp=sharing)
 
 
