@@ -83,6 +83,15 @@ Smoke тестирование:
 </details>
 
 #### Баг-репорты
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%201.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%201.2.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%202.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%202.2.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%203.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%203.2.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%204.png)
+![image](https://github.com/burovanya/portfolio-qa/blob/main/Bug%204.2.png)
+
 
 
 
