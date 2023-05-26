@@ -64,11 +64,11 @@
 
 Таблица Excel с чек-листом и результатом Test run https://docs.google.com/spreadsheets/d/1RCOYeB4vpyZfAYGEAW-eszaTNe9v5MIr/edit#gid=3299894
 
-Smoke тестирование:https://docs.google.com/spreadsheets/d/1gESIFaH3XXg93uTXaUbJJ7cgrcwk4V3v5nTbKoxeNFE/edit?usp=sharing
+Smoke тестирование
 
-Test cases:  
+Test cases:https://docs.google.com/spreadsheets/d/1gESIFaH3XXg93uTXaUbJJ7cgrcwk4V3v5nTbKoxeNFE/edit?usp=sharing
 
-Test run:
+Test run:![image](https://github.com/burovanya/portfolio-qa/blob/main/smoke.jpg)
 </details>
 
 
