@@ -71,6 +71,14 @@ Smoke тестирование:
 - Test cases: https://docs.google.com/spreadsheets/d/1QetCMho9SFI86aexS6et6UrAqV940NGNiSAATyUzWiI/edit?usp=sharing
 - Postman-коллекция: https://github.com/burovanya/portfolio-qa/blob/main/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%202.postman_collection.json
 - Test run Postman: https://github.com/burovanya/portfolio-qa/blob/main/%D0%9A%D1%83%D1%80%D1%81%D0%BE%D0%B2%D0%B0%D1%8F%202.postman_test_run.json
+
+Расписание тестовых активностей
+| Виды тестирования | Дата |
+| ----------- | ----------- |
+| Smoke тестирование | 4.01 - 4.01 |
+| Функциональное тестирование | 4.01 - 4.01 |
+| Регрессионное тестирование | 21.01-22.01 |
+| Тестирование API | 25.03-26.03 |
   
 </details>
 
