@@ -39,15 +39,12 @@
 </details>
 
 <details><summary>Был написан тест-план:</summary><br>
-  
+
 Продукт: веб-приложение для учителей (личные события в расписании)
-
 Заказчик: Skyeng
-
 Сайт: http://skyeng.ru/ 
 
 Основные требования: предоставить преподавателям возможность добавлять личные события во вкладке “Расписание”.
-
 Преподаватель может использовать личные события для собственных встреч. Они служат напоминанием, что у преподавателя что-то запланировано на это время.
 
 Все требования можно посмотреть по ссылке: https://docs.google.com/document/d/1KwkCh_gRAfiC7G064XySrrjeC8QjsXxQB1HDDupdY1Q/edit?usp=sharing 
@@ -61,14 +58,11 @@
 - Будет проведено тестирование API.
 
 Функциональное тестирование:
+- Таблица Excel с чек-листом и результатом Test run https://docs.google.com/spreadsheets/d/1RCOYeB4vpyZfAYGEAW-eszaTNe9v5MIr/edit#gid=3299894
 
-Таблица Excel с чек-листом и результатом Test run https://docs.google.com/spreadsheets/d/1RCOYeB4vpyZfAYGEAW-eszaTNe9v5MIr/edit#gid=3299894
-
-Smoke тестирование
-
-Test cases:https://docs.google.com/spreadsheets/d/1gESIFaH3XXg93uTXaUbJJ7cgrcwk4V3v5nTbKoxeNFE/edit?usp=sharing
-
-Test run:![image](https://github.com/burovanya/portfolio-qa/blob/main/smoke.jpg)
+Smoke тестирование:
+- Test cases:https://docs.google.com/spreadsheets/d/1gESIFaH3XXg93uTXaUbJJ7cgrcwk4V3v5nTbKoxeNFE/edit?usp=sharing
+- Test run:![image](https://github.com/burovanya/portfolio-qa/blob/main/smoke.jpg)
 </details>
 
 
