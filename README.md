@@ -63,6 +63,14 @@
 Smoke тестирование:
 - Test cases:https://docs.google.com/spreadsheets/d/1gESIFaH3XXg93uTXaUbJJ7cgrcwk4V3v5nTbKoxeNFE/edit?usp=sharing
 - Test run:![image](https://github.com/burovanya/portfolio-qa/blob/main/smoke.jpg)
+
+Регрессионное тестирование:
+- Таблица Excel с чек-листом и результатом Test run https://docs.google.com/spreadsheets/d/14d1Q1jnyxSHXotMHR4JXSdVR5kg5HUqk/edit?usp=sharing&ouid=108703726781754003146&rtpof=true&sd=true
+
+Тестирование API:
+- Test cases: https://docs.google.com/spreadsheets/d/1QetCMho9SFI86aexS6et6UrAqV940NGNiSAATyUzWiI/edit?usp=sharing
+- Postman-коллекция:
+  
 </details>
 
 
