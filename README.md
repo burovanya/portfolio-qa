@@ -38,7 +38,8 @@
 ![image](https://github.com/burovanya/portfolio-qa/blob/main/Miro.jpg)
 </details>
 
-#### Был написан тест-план:
+<details><summary>Был написан тест-план:</summary><br>
+  
 Продукт: веб-приложение для учителей (личные события в расписании)
 
 Заказчик: Skyeng
@@ -72,6 +73,7 @@ Smoke тестирование:
 Test cases:  
 
 Test run:
+</details>
 
 
 
