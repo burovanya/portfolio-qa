@@ -54,21 +54,17 @@
 
 Будут проведены следующие виды тестирования:
 
-Функциональное
-
-Smoke
-
-Приемочное
-
-Регрессионное
-
-Будет проведено тестирование API.
+- Функциональное
+- Smoke
+- Приемочное
+- Регрессионное
+- Будет проведено тестирование API.
 
 Функциональное тестирование:
 
-Таблица Excel с чек-листом и результатом Test run 
+Таблица Excel с чек-листом и результатом Test run https://docs.google.com/spreadsheets/d/1RCOYeB4vpyZfAYGEAW-eszaTNe9v5MIr/edit#gid=3299894
 
-Smoke тестирование:
+Smoke тестирование:https://docs.google.com/spreadsheets/d/1gESIFaH3XXg93uTXaUbJJ7cgrcwk4V3v5nTbKoxeNFE/edit?usp=sharing
 
 Test cases:  
 
