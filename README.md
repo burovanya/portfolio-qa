@@ -10,7 +10,7 @@
 <img src="https://img.shields.io/badge/Telegram-inactive?logo=telegram&logoColor=white&style=for-the-badge" alt="Telegram Badge"/>
 </a>
 </div>
-<br>
+
 <h3>💻 Обучалась в онлайн-университете Skypro по специальности "Инженер по тестированию"
   <br>
 📚 Продолжаю развитие в сфере тестирования</a>
