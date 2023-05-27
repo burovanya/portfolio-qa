@@ -1,6 +1,12 @@
-# Привет! Я - Анна👋
+<h1 align="center">Привет! Я - Анна👋</a>
 
-### Я QA Engineer
+<h2 align="center">Я QA Engineer</a>
+
+<div id="badges">
+<a href="https://t.me/+79608774619">
+<img src="https://img.shields.io/badge/Telegram-inactive?logo=telegram&logoColor=white&style=for-the-badge" alt="Telegram Badge"/>
+</a>
+</div>
 
 💻 Обучалась в онлайн-университете Skypro по специальности "Инженер по тестированию" <br>
 📚 Продолжаю развитие в сфере тестирования
